@@ -1,0 +1,125 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1371762244831434}
+  m_IsPrefabParent: 1
+--- !u!1 &1371762244831434
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4976495957083666}
+  - component: {fileID: 114405456578476698}
+  - component: {fileID: 114547967276837344}
+  m_Layer: 0
+  m_Name: PlayerManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4976495957083666
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1371762244831434}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -39.525253, y: -15.699999, z: -0.1328125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114405456578476698
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1371762244831434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32c002672ac54e4ba8426f3c74a8d69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerPrefab: {fileID: 1430464078389982, guid: df415d7eb72661649948c53d61beb030,
+    type: 2}
+  _playerAmount: {fileID: 11400000, guid: 550363f5a2aff194c87d5a8fe3dd867b, type: 2}
+  _winningPlayer: {fileID: 11400000, guid: 9f237fdf995a5564187a5ea86cfaed78, type: 2}
+  _playerData:
+  - InputSource: {fileID: 11400000, guid: f2fb660c9de04e0498bbd24e1f51ed91, type: 2}
+    PlayerScore: {fileID: 11400000, guid: 63a9a43eb59ed4c4687b158483ef1e5c, type: 2}
+    PlayerColor: {r: 1, g: 0, b: 0, a: 1}
+    ColorName: Red
+    StartPosition: {fileID: 0}
+  - InputSource: {fileID: 11400000, guid: f2fb660c9de04e0498bbd24e1f51ed91, type: 2}
+    PlayerScore: {fileID: 11400000, guid: 3a6e61b8d4f222548b8b0363a15ef109, type: 2}
+    PlayerColor: {r: 0.039443612, g: 1, b: 0, a: 1}
+    ColorName: Green
+    StartPosition: {fileID: 0}
+  - InputSource: {fileID: 11400000, guid: f2fb660c9de04e0498bbd24e1f51ed91, type: 2}
+    PlayerScore: {fileID: 11400000, guid: 9c2587470d7661048a800b81462aabd4, type: 2}
+    PlayerColor: {r: 0.9805836, g: 1, b: 0.4575472, a: 1}
+    ColorName: Yellow
+    StartPosition: {fileID: 0}
+  - InputSource: {fileID: 11400000, guid: f2fb660c9de04e0498bbd24e1f51ed91, type: 2}
+    PlayerScore: {fileID: 11400000, guid: e30af6f4c96912245b9dfc052ff83095, type: 2}
+    PlayerColor: {r: 0, g: 0.13275027, b: 1, a: 1}
+    ColorName: Blue
+    StartPosition: {fileID: 0}
+--- !u!114 &114547967276837344
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1371762244831434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e839e4c12473014b9b3d3faccc0f61d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventResponsePairs:
+  - Event: {fileID: 11400000, guid: 50f9bac8505d28c479b2bfa827f849ba, type: 2}
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114405456578476698}
+          m_MethodName: StartGame
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - Event: {fileID: 11400000, guid: 8a48dcf0de8a58e4598bc9537da61274, type: 2}
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114405456578476698}
+          m_MethodName: SetWinningPlayerVariable
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
